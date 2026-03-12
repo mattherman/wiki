@@ -1,0 +1,7 @@
+{:title "Hello, world!"
+ :template "blueblog/main.html"
+ :author "me@myself.net"}
+---
+# Hey there!
+
+Welcome to my site!

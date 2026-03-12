@@ -1,0 +1,155 @@
+## Installed Software
+
+**Fish**
+
+Alternative shell.
+
+Went to [fishshell.com](https://fishshell.com), Debian "Subscribe or Download",  "Grab binary packages directly", downloaded the `.deb`.
+
+```bash
+sudo apt install ~/Downloads/<file>.deb
+```
+
+**Kitty**
+
+Alternative terminal. Supports fonts with ligatures.
+
+Download archive from [here](https://github.com/kovidgoyal/kitty/releases).
+
+```bash
+cd ~/Downloads
+mkdir kitty-0.45.0
+tar -xf kitty-0.45.0-x86_64.txz -C kitty-0.45.0
+sudo cp kitty-0.45.0/bin/* /usr/local/bin
+sudo cp kitty-0.45.0/lib/* /usr/local/lib
+sudo cp kitty-0.45.0
+
+**Neovim**
+
+Text editor.
+
+Followed instructions for pre-built archives [here](https://neovim.io/doc/install).
+
+```bash
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+sudo rm -rf /opt/nvim-linux-x86_64
+sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+```
+
+Added it to my `PATH`.
+
+```bash
+fish_add_path /opt/nvim-linux-x86-64/bin
+```
+
+**Git**
+
+Version control. Installed via apt.
+
+**FiraCode & FiraMono Font**
+
+"Nerd Fonts" for Neovim. Installs both FiraCode (includes ligatures, doesn't work in Gnome Terminal) and FiraMono (no ligatures).
+
+Downloaded font files from [here](https://www.nerdfonts.com/font-downloads).
+
+```bash
+# Copy ttf files to font directory
+cd ~/Downloads
+unzip FiraCode.zip -d FiraCode
+sudo cp FiraCode/*.ttf /usr/local/share/fonts/
+unzip FiraMono.zip -d FiraMono
+sudo cp FiraMono/*.ttf /usr/local/share/fonts
+# Refresh font cache
+fc-cache -fv
+# Verify install
+fc-list | grep -i fira
+```
+
+**Lua & LuaRocks**
+
+Programming language and package manager. LuaRocks is needed for the lazy.nvim plugin manager in Neovim.
+
+Install build dependencies (if not installed).
+
+```bash
+sudo apt install build-essential libreadline-dev unzip
+```
+
+Download latest Lua 5.1 release from [here](https://www.lua.org/ftp/).
+
+```bash
+cd ~/Downloads
+tar -xzf lua-5.5.0.tar.gz
+cd lua-5.5.0
+make linux
+make test
+sudo make linux install
+```
+
+Download latest LuaRocks release from [here](https://luarocks.github.io/luarocks/releases/).
+
+```bash
+cd ~/Downloads
+tar -xzf luarocks-3.13.0.tar.gz
+cd luarocks-3.13.0
+./configure --with-lua-include=/usr/local/include
+make
+sudo make install
+```
+
+**ripgrep**
+
+RegEx search tool. Installed via apt.
+
+**fzf**
+
+Fuzzy finder. Installed via apt.
+
+**fd**
+
+File finder. Installed via apt.
+
+**tree-sitter-cli**
+
+Syntax parsing.
+
+Download latest release from [here](https://github.com/tree-sitter/tree-sitter/releases/tag/v0.26.6).
+Copied executable to `~/.local/bin`. Added to `PATH`.
+
+**Janet**
+
+Embeddable, Lisp-like scripting language.
+
+Clone the [repository](https://github.com/janet-lang/janet).
+
+```bash
+export PREFIX=/home/matt/.local
+make -j
+make install
+make install-jpm-git
+```
+
+## Neovim Setup
+
+**lazy.nvim**
+
+Install a "Nerd Font".
+Install LuaRocks.
+Follow instructions [here](https://lazy.folke.io/installation).
+
+**telescope.nvim**
+
+Install ripgrep, fzf, and fd.
+
+**nvim-treesitter**
+
+Install tree-sitter-cli.
+
+### LSP
+
+**lua-language-server**
+
+Downloaded latest release from [here](https://github.com/LuaLS/lua-language-server/releases/latest).
+Copied to `/opt/`
+Added `/opt/<dir>/bin` to PATH using `fish_add_path`.
+
