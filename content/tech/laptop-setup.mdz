@@ -1,12 +1,17 @@
+{:title "Laptop Setup"
+ :template "mdzdoc/main.html"
+ :author "me@myself.net"}
+---
+
 ## Installed Software
 
 @strong{Fish}
 
 Alternative shell.
 
-Went to @link[https://fishshell.com]{fishshell.com}, Debian "Subscribe or Download",  "Grab binary packages directly", downloaded the @pre(.deb).
+Went to @link[https://fishshell.com]{fishshell.com}, Debian "Subscribe or Download",  "Grab binary packages directly", downloaded the @code`.deb`.
 
-@codeblock[bash]```
+@code```
 sudo apt install ~/Downloads/<file>.deb
 ```
 
@@ -16,13 +21,14 @@ Alternative terminal. Supports fonts with ligatures.
 
 Download archive from @link[https://github.com/kovidgoyal/kitty/releases]{here}.
 
-@codeblock[bash]```
+@code```
 cd ~/Downloads
 mkdir kitty-0.45.0
 tar -xf kitty-0.45.0-x86_64.txz -C kitty-0.45.0
 sudo cp kitty-0.45.0/bin/* /usr/local/bin
 sudo cp kitty-0.45.0/lib/* /usr/local/lib
 sudo cp kitty-0.45.0
+```
 
 @strong{Neovim}
 
@@ -30,15 +36,15 @@ Text editor.
 
 Followed instructions for pre-built archives @link[https://neovim.io/doc/install]{here}.
 
-@codeblock[bash]```
+@code```
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
 sudo rm -rf /opt/nvim-linux-x86_64
 sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
 ```
 
-Added it to my @pre{PATH}.
+Added it to my @code`PATH`.
 
-@codeblock[bash]```
+@code```
 fish_add_path /opt/nvim-linux-x86-64/bin
 ```
 
@@ -52,7 +58,7 @@ Version control. Installed via apt.
 
 Downloaded font files from @link[https://www.nerdfonts.com/font-downloads]{here}.
 
-@codeblock[bash]```
+@code```
 # Copy ttf files to font directory
 cd ~/Downloads
 unzip FiraCode.zip -d FiraCode
@@ -71,13 +77,13 @@ Programming language and package manager. LuaRocks is needed for the lazy.nvim p
 
 Install build dependencies (if not installed).
 
-@codeblock[bash]```
+@code```
 sudo apt install build-essential libreadline-dev unzip
 ```
 
 Download latest Lua 5.1 release from @link[https://www.lua.org/ftp/]{here}.
 
-@codeblock[bash]```
+@code```
 cd ~/Downloads
 tar -xzf lua-5.5.0.tar.gz
 cd lua-5.5.0
@@ -88,7 +94,7 @@ sudo make linux install
 
 Download latest LuaRocks release from @link[https://luarocks.github.io/luarocks/releases/]{here}.
 
-@codeblock[bash]```
+@code```
 cd ~/Downloads
 tar -xzf luarocks-3.13.0.tar.gz
 cd luarocks-3.13.0
@@ -114,7 +120,7 @@ File finder. Installed via apt.
 Syntax parsing.
 
 Download latest release from @link[https://github.com/tree-sitter/tree-sitter/releases/tag/v0.26.6]{here}.
-Copied executable to `~/.local/bin`. Added to @pre{PATH}.
+Copied executable to @code`~/.local/bin`. Added to @code`PATH`.
 
 @strong{Janet}
 
@@ -122,7 +128,7 @@ Embeddable, Lisp-like scripting language.
 
 Clone the @link[https://github.com/janet-lang/janet]{repository}.
 
-@codeblock[bash]```
+@code```
 export PREFIX=/home/matt/.local
 make -j
 make install
@@ -150,6 +156,6 @@ Install tree-sitter-cli.
 @strong{lua-language-server}
 
 Downloaded latest release from @link[https://github.com/LuaLS/lua-language-server/releases/latest]{here}.
-Copied to @pre{/opt/}
-Added @pre{/opt/<dir>/bin} to PATH using @pre{fish_add_path}.
+Copied to @code`/opt/`
+Added @code`/opt/<dir>/bin` to PATH using @code`fish_add_path`.
 

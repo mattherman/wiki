@@ -1,5 +1,5 @@
 {:title "Hello, world!"
- :template "blueblog/main.html"
+ :template "mdzdoc/main.html"
  :author "me@myself.net"}
 ---
 # Hey there!
@@ -10,3 +10,11 @@ Welcome to my site!
 @tag[strong]{Hello!}
 
 @link[https://github.com/mattherman/wiki]{link!}
+
+@code`single-line`
+
+@code```multi-
+line
+```
+
+@strong{Two Words}
