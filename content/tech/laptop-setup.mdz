@@ -1,11 +1,11 @@
 {:title "Laptop Setup"
- :template "mdzdoc/main.html"
+ :template "blueblog/main.html"
  :author "me@myself.net"}
 ---
 
 ## Installed Software
 
-@strong{Fish}
+@tag[b]{Fish}
 
 Alternative shell.
 
@@ -15,7 +15,7 @@ Went to @link[https://fishshell.com]{fishshell.com}, Debian "Subscribe or Downlo
 sudo apt install ~/Downloads/<file>.deb
 ```
 
-@strong{Kitty}
+@tag[b]{Kitty}
 
 Alternative terminal. Supports fonts with ligatures.
 
@@ -30,7 +30,7 @@ sudo cp kitty-0.45.0/lib/* /usr/local/lib
 sudo cp kitty-0.45.0
 ```
 
-@strong{Neovim}
+@tag[b]{Neovim}
 
 Text editor.
 
@@ -48,13 +48,13 @@ Added it to my @code`PATH`.
 fish_add_path /opt/nvim-linux-x86-64/bin
 ```
 
-@strong{Git}
+@tag[b]{Git}
 
 Version control. Installed via apt.
 
-@strong{FiraCode & FiraMono Font}
+@tag[b]{FiraCode & FiraMono Font}
 
-"Nerd Fonts" for Neovim. Installs both FiraCode (includes ligatures, doesn't work in Gnome Terminal) and FiraMono (no ligatures).
+Fonts for Neovim. Installs both FiraCode (includes ligatures, doesn't work in Gnome Terminal) and FiraMono (no ligatures).
 
 Downloaded font files from @link[https://www.nerdfonts.com/font-downloads]{here}.
 
@@ -71,7 +71,7 @@ fc-cache -fv
 fc-list | grep -i fira
 ```
 
-@strong{Lua & LuaRocks}
+@tag[b]{Lua & LuaRocks}
 
 Programming language and package manager. LuaRocks is needed for the lazy.nvim plugin manager in Neovim.
 
@@ -103,26 +103,26 @@ make
 sudo make install
 ```
 
-@strong{ripgrep}
+@tag[b]{ripgrep}
 
 RegEx search tool. Installed via apt.
 
-@strong{fzf}
+@tag[b]{fzf}
 
 Fuzzy finder. Installed via apt.
 
-@strong{fd}
+@tag[b]{fd}
 
 File finder. Installed via apt.
 
-@strong{tree-sitter-cli}
+@tag[b]{tree-sitter-cli}
 
 Syntax parsing.
 
 Download latest release from @link[https://github.com/tree-sitter/tree-sitter/releases/tag/v0.26.6]{here}.
 Copied executable to @code`~/.local/bin`. Added to @code`PATH`.
 
-@strong{Janet}
+@tag[b]{Janet}
 
 Embeddable, Lisp-like scripting language.
 
@@ -137,23 +137,23 @@ make install-jpm-git
 
 ## Neovim Setup
 
-@strong{lazy.nvim}
+@tag[b]{lazy.nvim}
 
 Install a "Nerd Font".
 Install LuaRocks.
 Follow instructions @link[https://lazy.folke.io/installation]{here}.
 
-@strong{telescope.nvim}
+@tag[b]{telescope.nvim}
 
 Install ripgrep, fzf, and fd.
 
-@strong{nvim-treesitter}
+@tag[b]{nvim-treesitter}
 
 Install tree-sitter-cli.
 
 ### LSP
 
-@strong{lua-language-server}
+@tag[b]{lua-language-server}
 
 Downloaded latest release from @link[https://github.com/LuaLS/lua-language-server/releases/latest]{here}.
 Copied to @code`/opt/`
