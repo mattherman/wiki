@@ -1,22 +1,22 @@
 ## Installed Software
 
-**Fish**
+@strong{Fish}
 
 Alternative shell.
 
-Went to [fishshell.com](https://fishshell.com), Debian "Subscribe or Download",  "Grab binary packages directly", downloaded the `.deb`.
+Went to @link[https://fishshell.com]{fishshell.com}, Debian "Subscribe or Download",  "Grab binary packages directly", downloaded the @pre(.deb).
 
-```bash
+@codeblock[bash]```
 sudo apt install ~/Downloads/<file>.deb
 ```
 
-**Kitty**
+@strong{Kitty}
 
 Alternative terminal. Supports fonts with ligatures.
 
-Download archive from [here](https://github.com/kovidgoyal/kitty/releases).
+Download archive from @link[https://github.com/kovidgoyal/kitty/releases]{here}.
 
-```bash
+@codeblock[bash]```
 cd ~/Downloads
 mkdir kitty-0.45.0
 tar -xf kitty-0.45.0-x86_64.txz -C kitty-0.45.0
@@ -24,35 +24,35 @@ sudo cp kitty-0.45.0/bin/* /usr/local/bin
 sudo cp kitty-0.45.0/lib/* /usr/local/lib
 sudo cp kitty-0.45.0
 
-**Neovim**
+@strong{Neovim}
 
 Text editor.
 
-Followed instructions for pre-built archives [here](https://neovim.io/doc/install).
+Followed instructions for pre-built archives @link[https://neovim.io/doc/install]{here}.
 
-```bash
+@codeblock[bash]```
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
 sudo rm -rf /opt/nvim-linux-x86_64
 sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
 ```
 
-Added it to my `PATH`.
+Added it to my @pre{PATH}.
 
-```bash
+@codeblock[bash]```
 fish_add_path /opt/nvim-linux-x86-64/bin
 ```
 
-**Git**
+@strong{Git}
 
 Version control. Installed via apt.
 
-**FiraCode & FiraMono Font**
+@strong{FiraCode & FiraMono Font}
 
 "Nerd Fonts" for Neovim. Installs both FiraCode (includes ligatures, doesn't work in Gnome Terminal) and FiraMono (no ligatures).
 
-Downloaded font files from [here](https://www.nerdfonts.com/font-downloads).
+Downloaded font files from @link[https://www.nerdfonts.com/font-downloads]{here}.
 
-```bash
+@codeblock[bash]```
 # Copy ttf files to font directory
 cd ~/Downloads
 unzip FiraCode.zip -d FiraCode
@@ -65,19 +65,19 @@ fc-cache -fv
 fc-list | grep -i fira
 ```
 
-**Lua & LuaRocks**
+@strong{Lua & LuaRocks}
 
 Programming language and package manager. LuaRocks is needed for the lazy.nvim plugin manager in Neovim.
 
 Install build dependencies (if not installed).
 
-```bash
+@codeblock[bash]```
 sudo apt install build-essential libreadline-dev unzip
 ```
 
-Download latest Lua 5.1 release from [here](https://www.lua.org/ftp/).
+Download latest Lua 5.1 release from @link[https://www.lua.org/ftp/]{here}.
 
-```bash
+@codeblock[bash]```
 cd ~/Downloads
 tar -xzf lua-5.5.0.tar.gz
 cd lua-5.5.0
@@ -86,9 +86,9 @@ make test
 sudo make linux install
 ```
 
-Download latest LuaRocks release from [here](https://luarocks.github.io/luarocks/releases/).
+Download latest LuaRocks release from @link[https://luarocks.github.io/luarocks/releases/]{here}.
 
-```bash
+@codeblock[bash]```
 cd ~/Downloads
 tar -xzf luarocks-3.13.0.tar.gz
 cd luarocks-3.13.0
@@ -97,32 +97,32 @@ make
 sudo make install
 ```
 
-**ripgrep**
+@strong{ripgrep}
 
 RegEx search tool. Installed via apt.
 
-**fzf**
+@strong{fzf}
 
 Fuzzy finder. Installed via apt.
 
-**fd**
+@strong{fd}
 
 File finder. Installed via apt.
 
-**tree-sitter-cli**
+@strong{tree-sitter-cli}
 
 Syntax parsing.
 
-Download latest release from [here](https://github.com/tree-sitter/tree-sitter/releases/tag/v0.26.6).
-Copied executable to `~/.local/bin`. Added to `PATH`.
+Download latest release from @link[https://github.com/tree-sitter/tree-sitter/releases/tag/v0.26.6]{here}.
+Copied executable to `~/.local/bin`. Added to @pre{PATH}.
 
-**Janet**
+@strong{Janet}
 
 Embeddable, Lisp-like scripting language.
 
-Clone the [repository](https://github.com/janet-lang/janet).
+Clone the @link[https://github.com/janet-lang/janet]{repository}.
 
-```bash
+@codeblock[bash]```
 export PREFIX=/home/matt/.local
 make -j
 make install
@@ -131,25 +131,25 @@ make install-jpm-git
 
 ## Neovim Setup
 
-**lazy.nvim**
+@strong{lazy.nvim}
 
 Install a "Nerd Font".
 Install LuaRocks.
-Follow instructions [here](https://lazy.folke.io/installation).
+Follow instructions @link[https://lazy.folke.io/installation]{here}.
 
-**telescope.nvim**
+@strong{telescope.nvim}
 
 Install ripgrep, fzf, and fd.
 
-**nvim-treesitter**
+@strong{nvim-treesitter}
 
 Install tree-sitter-cli.
 
 ### LSP
 
-**lua-language-server**
+@strong{lua-language-server}
 
-Downloaded latest release from [here](https://github.com/LuaLS/lua-language-server/releases/latest).
-Copied to `/opt/`
-Added `/opt/<dir>/bin` to PATH using `fish_add_path`.
+Downloaded latest release from @link[https://github.com/LuaLS/lua-language-server/releases/latest]{here}.
+Copied to @pre{/opt/}
+Added @pre{/opt/<dir>/bin} to PATH using @pre{fish_add_path}.
 

@@ -5,3 +5,8 @@
 # Hey there!
 
 Welcome to my site!
+
+@strong{Hello!}
+@tag[strong]{Hello!}
+
+@link[https://github.com/mattherman/wiki]{link!}
