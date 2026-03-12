@@ -5,7 +5,7 @@
 
 ## Installed Software
 
-@tag[b]{Fish}
+### Fish
 
 Alternative shell.
 
@@ -15,22 +15,7 @@ Went to @link[https://fishshell.com]{fishshell.com}, Debian "Subscribe or Downlo
 sudo apt install ~/Downloads/<file>.deb
 ```
 
-@tag[b]{Kitty}
-
-Alternative terminal. Supports fonts with ligatures.
-
-Download archive from @link[https://github.com/kovidgoyal/kitty/releases]{here}.
-
-@code```
-cd ~/Downloads
-mkdir kitty-0.45.0
-tar -xf kitty-0.45.0-x86_64.txz -C kitty-0.45.0
-sudo cp kitty-0.45.0/bin/* /usr/local/bin
-sudo cp kitty-0.45.0/lib/* /usr/local/lib
-sudo cp kitty-0.45.0
-```
-
-@tag[b]{Neovim}
+### Neovim
 
 Text editor.
 
@@ -48,11 +33,11 @@ Added it to my @code`PATH`.
 fish_add_path /opt/nvim-linux-x86-64/bin
 ```
 
-@tag[b]{Git}
+### Git
 
 Version control. Installed via apt.
 
-@tag[b]{FiraCode & FiraMono Font}
+### FiraCode & FiraMono Font
 
 Fonts for Neovim. Installs both FiraCode (includes ligatures, doesn't work in Gnome Terminal) and FiraMono (no ligatures).
 
@@ -71,7 +56,7 @@ fc-cache -fv
 fc-list | grep -i fira
 ```
 
-@tag[b]{Lua & LuaRocks}
+### Lua & LuaRocks
 
 Programming language and package manager. LuaRocks is needed for the lazy.nvim plugin manager in Neovim.
 
@@ -103,26 +88,26 @@ make
 sudo make install
 ```
 
-@tag[b]{ripgrep}
+### ripgrep
 
 RegEx search tool. Installed via apt.
 
-@tag[b]{fzf}
+### fzf
 
 Fuzzy finder. Installed via apt.
 
-@tag[b]{fd}
+### fd
 
 File finder. Installed via apt.
 
-@tag[b]{tree-sitter-cli}
+### tree-sitter-cli
 
 Syntax parsing.
 
 Download latest release from @link[https://github.com/tree-sitter/tree-sitter/releases/tag/v0.26.6]{here}.
 Copied executable to @code`~/.local/bin`. Added to @code`PATH`.
 
-@tag[b]{Janet}
+### Janet
 
 Embeddable, Lisp-like scripting language.
 
@@ -137,23 +122,23 @@ make install-jpm-git
 
 ## Neovim Setup
 
-@tag[b]{lazy.nvim}
+### lazy.nvim
 
 Install a "Nerd Font".
 Install LuaRocks.
 Follow instructions @link[https://lazy.folke.io/installation]{here}.
 
-@tag[b]{telescope.nvim}
+### telescope.nvim
 
 Install ripgrep, fzf, and fd.
 
-@tag[b]{nvim-treesitter}
+### nvim-treesitter
 
 Install tree-sitter-cli.
 
 ### LSP
 
-@tag[b]{lua-language-server}
+#### lua-language-server
 
 Downloaded latest release from @link[https://github.com/LuaLS/lua-language-server/releases/latest]{here}.
 Copied to @code`/opt/`
